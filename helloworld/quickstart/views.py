@@ -9,7 +9,7 @@ from quickstart.serializers import UserSerializer, GroupSerializer
 # Create your views here.
 class UserViewSet(viewsets.ModelViewSet):
     """
-    查看、编辑用户数据的API接口
+    查看、编辑用户数据的API接口，这里可以显示在页面上，给后台人员看
     """
     queryset = User.objects.all()
     serializer_class = UserSerializer

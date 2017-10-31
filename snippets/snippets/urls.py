@@ -1,4 +1,4 @@
-"""helloworld URL Configuration
+"""snippets URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.11/topics/http/urls/
@@ -17,16 +17,13 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from rest_framework import routers
 
-from quickstart import views
+from snippetapp import views
 
 router = routers.DefaultRouter()
-router.register(r'users', views.UserViewSet)
-# 主动利用现有代码
-router.register(r'groups', views.GroupViewSet)
+router.register(r'snippets', views.SnippetViewSet)
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include(router.urls)),
-    # 解决用户可以在任意界面登录的问题
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]
