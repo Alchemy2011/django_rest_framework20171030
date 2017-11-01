@@ -27,6 +27,6 @@ router.register(r'groups', views.GroupViewSet)
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include(router.urls)),
-    # 解决用户可以在任意界面登录的问题
+    # 解决网站管理员可以在任意界面登录的问题
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
 ]

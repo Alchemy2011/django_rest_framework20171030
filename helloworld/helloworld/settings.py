@@ -127,7 +127,7 @@ STATIC_URL = '/static/'
 REST_FRAMEWORK = {
     # djangorestframework3.7.1分页需要下面这行
     # 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 3,
+    'PAGE_SIZE': 1,
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.IsAdminUser',
     ]
