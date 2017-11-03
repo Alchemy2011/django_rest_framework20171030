@@ -34,7 +34,7 @@ class Post(models.Model):
     """
     博文
     """
-    title = models.CharField(max_length=70)  # 长度参考今日头条
+    title = models.CharField(max_length=70)  # 长度可参考知名应用
     content = models.TextField()
 
     created = models.DateTimeField(auto_now_add=True)  # 这两条直接复制
