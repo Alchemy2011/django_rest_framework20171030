@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+{% load static from staticfiles %}
+<head>
+    <meta charset="UTF-8">
+    <meta property="qc:admins" content="20574040667416216375">
+    <meta property="qc:admins" content="205740460760160116301676375">
+    <meta name="robots" content="all">
+    <meta name="author" content="">
+    <meta name="Copyright" content="">
+    <meta name="renderer" content="webkit">
+    <title>作品 - 新片场</title>
+    <meta name="keywords" content="原创短片,原创视频,微电影,原创作品,创作人,影人社区,影视社区,新媒体电影,新媒体影视,互联网影视,互联网电影,发行,短片,微电影,原创视频,创作人">
+    <meta name="description" content="汇集新片场创作人短片原创作品,覆盖剧情片,动画,纪录片,广告短片,宣传片,MV,特殊摄影,混剪,配音,栏目,网剧,实验短片,预告片,花絮等丰富类型.">
+    <link rel="shortcut icon" href="http://www.xinpianchang.com/favicon.ico?20161118">
+    <link rel="apple-touch-icon" href="http://www.xinpianchang.com/touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="http://www.xinpianchang.com/touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="http://www.xinpianchang.com/touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="http://www.xinpianchang.com/touch-icon-ipad-retina.png">
+    <style>
+        .line-hide-1 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+        }
+    </style>
+    <link rel="stylesheet" href="{% static 'css/font-icon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/common.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flags.css' %}">
+    <link rel="stylesheet" href="{% static 'css/common(1).css' %}">
+    <!-- <script src="/public/js/wb.js" type="text/javascript" charset="utf-8"></script> -->
+    <script src="{% static 'js/push.js' %}"></script>
+    <script type="text/javascript" async="" charset="utf-8"></script>
+    <script type="text/javascript" id="zhuge-js" async="" src="{% static 'js/zhuge-lastest.min.js' %}"></script>
+    <script async="" src="{% static 'js/analytics.js' %}"></script>
+    <script type="text/javascript" charset="utf-8" async=""></script>
+    <script async="" src="{% static 'js/sensorsdata-1.8.14.min.js' %}" charset="UTF-8"></script>
+    <script src="{% static 'js/hm.js' %}"></script>
+    <style id="nightModeStyle">
+        html.cye-enabled.cye-nm:not(*:-webkit-full-screen) body,
+        html.cye-enabled.cye-nm:not(*:-webkit-full-screen) #cye-workaround-body {
+            -webkit-filter: contrast(91%) brightness(84%) invert(1);
+        }</style>
+    <style id="cyebody">html.cye-enabled.cye-lm body {
+        background-color: #cce8cf !important;
+        border-color: rgb(51, 58, 51) !important;
+        background-image: none !important;
+        color: #000000 !important
+    }</style>
+    <style id="cyediv">html.cye-enabled.cye-lm div {
+        background-color: #cce8cf !important;
+        border-color: rgb(51, 58, 51) !important;
+        background-image: none !important;
+        color: #000000 !important
+    }</style>
+    <style id="cyetable">html.cye-enabled.cye-lm th {
+        background-color: #cce8cf !important;
+        border-color: rgb(51, 58, 51) !important;
+        background-image: none !important;
+        color: #000000 !important
+    }
+
+    html.cye-enabled.cye-lm td {
+        background-color: #cce8cf !important;
+        border-color: rgb(51, 58, 51) !important;
+        background-image: none !important;
+        color: #000000 !important
+    }</style>
+    <style id="cyetextInput">html.cye-enabled.cye-lm input[type=text] {
+        background-color: #cce8cf !important;
+        border-color: rgb(51, 58, 51) !important;
+        background-image: none !important;
+        color: #000000 !important
+    }
+
+    html.cye-enabled.cye-lm textarea {
+        background-color: #cce8cf !important;
+        border-color: rgb(51, 58, 51) !important;
+        background-image: none !important;
+        color: #000000 !important
+    }</style>
+    <style id="cyeselect">html.cye-enabled.cye-lm select {
+        background-color: #cce8cf !important;
+        border-color: rgb(51, 58, 51) !important;
+        background-image: none !important;
+        color: #000000 !important
+    }</style>
+    <style id="cyeul">html.cye-enabled.cye-lm ul {
+        background-color: #cce8cf !important;
+        border-color: rgb(51, 58, 51) !important;
+        background-image: none !important;
+        color: #000000 !important
+    }</style>
+    <style id="cyeChangeByClick">html.cye-enabled.cye-lm .cye-lm-tag, html.cye-enabled.cye-lm.cye-lm-tag {
+        background-color: #cce8cf !important;
+        border-color: rgb(51, 58, 51) !important;
+        background-image: none !important;
+        color: #000000 !important
+    }</style>
+
+    <script src="{% static 'js/zhugeio.js' %}" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        // 统计
+        dplus.register({
+            "是否登录": userid ? "登录" : "未登录",
+            "userid": userid
+        });
+        var pageName = "作品列表页";
+
+        dplus.track('页面访问', {
+            "页面名称": pageName
+        });
+
+    </script>
+</head>
+<html lang="en">
+<div id="cyeBlackMaskLayer"
+     style="background-color: rgb(19, 19, 19); position: fixed; width: 1980px; height: 1080px; z-index: -2147483648;"></div>
+<body style="">
+    <div class="">
+        <div>
+            <div style="float: left; width: 270px; height: 274px;">
+                <div>
+                    <img src="{{ post.thumbnail }}" style="width: 270px; height: 162px;">
+                </div>
+                <div style="width: 270px; height: 112px;">
+                    <div>{{ post.preview }}</div>
+                    <h3>{{ post.title }}</h3>
+                    <div>
+                        <span>播放量 &nbsp;{{ post.play_counts }}</span>
+                        <span>点赞数 &nbsp;{{ post.like_counts }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{#    评论#}
+    <div>
+        <h3>评论</h3>
+    </div>
+    <div>
+        {% for comment in comment_list %}
+            <div style="width: 690px; height: 106px;">
+                <img src="{{ comment.avatar }}" style="width: 40px; height: 40px;">
+            </div>
+            <div>{{ comment.username }}</div>
+            <div>{{ comment.created_at }}</div>
+            <div>{{ comment.content }}</div>
+            <br>
+        {% endfor %}
+
+    </div>
+    <script src="{% static 'js/jquery-1.7.1.min.js' %}"></script>
+</body>
+</html>
