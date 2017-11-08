@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">	
+</head>
+
+<body>
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="index.html">在线电脑商城</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">首页</a></li>  
+        <li><a href="product_list.html?category=1">笔记本</a></li>          
+        <li><a href="product_list.html?category=2">平板电脑</a></li>
+        <li><a href="product_list.html?category=3">一体机</a></li> 
+        <li><a href="product_list.html?category=4">台式机</a></li> 
+        <li><a href="product_list.html?category=5">服务器</a></li>            
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li id="logout"><a href=""><span class="glyphicon glyphicon-log-out"></span> 登出</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="text-align:center;">
+      <div style="padding-bottom:20px;"><h2>会员中心</h2></div>    
+      <div style="padding-bottom:20px;"><a href="usercenter.html">会员信息</a></div>    
+      <div style="padding-bottom:20px;"><a href="useraddress.html">收货地址</a></div>    
+      <div style="padding-bottom:20px;"><a href="usercart.html">我的购物车</a></div>          
+      <div style="padding-bottom:20px;"><a href="userorder.html">我的订单</a></div>    
+      <div style="padding-bottom:20px;"><a href="usercenter.html">我的收藏</a></div>    
+      <div style="padding-bottom:20px;"><a href="usercenter.html">我的留言</a></div>    
+    </div>
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8" style="padding-top:80px;">
+      <!-- <div id="id"></div>     -->
+      <div id="username" style="padding-top:20px;"></div>    
+      <div id="email" style="padding-top:20px;"></div>    
+      <div id="last_name" style="padding-top:20px;"></div>    
+      <div id="first_name" style="padding-top:20px;"></div>    
+      <div id="date_joined" style="padding-top:20px;"></div>   
+      <div id="mobile_phone" style="padding-top:20px;"></div>                       
+    </div>
+  
+  </div>
+
+</div>
+
+
+<script src="https://ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="shop.js"></script>
+<script src="usercenter.js"></script>
+<script></script>
+
+</body>
+
+</html>

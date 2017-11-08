@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">	
+</head>
+
+<body>
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="index.html">在线电脑商城</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">首页</a></li>  
+        <li><a href="product_list.html?category=1">笔记本</a></li>          
+        <li><a href="product_list.html?category=2">平板电脑</a></li>
+        <li><a href="product_list.html?category=3">一体机</a></li> 
+        <li><a href="product_list.html?category=4">台式机</a></li> 
+        <li><a href="product_list.html?category=5">服务器</a></li>       
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="usersignin.html"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="padding-top:50px;">
+
+      <form class="form-horizontal" role="form">
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="username">用户名：</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="username" placeholder="请输入用户名">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="password">密码：</label>
+          <div class="col-sm-10"> 
+            <input type="password" class="form-control" id="password" placeholder="请输入密码">
+          </div>
+        </div>
+      </form>
+      <div class="form-group"> 
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" class="btn btn-default" id="submit">登录</button>
+        </div>
+      </div>
+    </div>
+
+  
+  </div>
+
+</div>
+
+
+<script src="https://ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="shop.js"></script>
+<script src="userlogin.js"></script>
+<script></script>
+
+</body>
+
+</html>

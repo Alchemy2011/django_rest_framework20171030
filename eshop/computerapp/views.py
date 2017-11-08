@@ -1,10 +1,13 @@
 # Create your views here.
-from rest_framework import generics
+from rest_framework import generics, permissions
 from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.pagination import LimitOffsetPagination
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
-from computerapp.models import Product
-from computerapp.serializers import ProductListSerializer, ProductRetrieveSerializer
+from computerapp.models import Product, UserProfile, DeliveryAddress
+from computerapp.serializers import ProductListSerializer, ProductRetrieveSerializer, UserInfoSerializer, \
+    UserProfileSerializer, DeliveryAddressLCSerializer
 
 
 class ProductListView(generics.ListAPIView):
@@ -84,3 +87,56 @@ class ProductRetrieveView(generics.RetrieveAPIView):
     queryset = Product.objects.all()
     # 一般来说详情使用的序列器字段多一点，所以和列表使用的序列器分开
     serializer_class = ProductRetrieveSerializer
+
+
+# http://www.django-rest-framework.org/api-guide/views/
+class UserInfoView(APIView):
+    """
+    用户基本信息
+    """
+    permission_classes = (permissions.IsAuthenticated,)
+
+    def get(self, request, format=None):
+        user = self.request.user
+        serializer = UserInfoSerializer(user)
+        return Response(serializer.data)
+
+
+class UserProfileRUView(generics.RetrieveUpdateAPIView):
+    """
+    用户其他信息
+    """
+    # 没有差别的话，就用现成的，有特殊要求，再修改序列器
+    serializer_class = UserProfileSerializer
+    permission_classes = (permissions.IsAuthenticated,)
+
+    # 新方法，不希望获取所用户的信息
+    def get_object(self):
+        user = self.request.user
+        obj = UserProfile.objects.get(user=user)
+        return obj
+
+
+class DeliveryAddressLCView(generics.ListCreateAPIView):
+    """
+    收获地址LC
+    """
+    serializer_class = DeliveryAddressLCSerializer
+    permission_classes = (permissions.IsAuthenticated,)
+
+    # 不能让查询所有的用户地址，当前用户只能看你自己的，不能看别人的
+    def get_queryset(self):
+        user = self.request.user
+        queryset = DeliveryAddress.objects.filter(user=user)
+        return queryset
+
+    # 防作弊，也可以在序列器里面使用create，暂时不会
+    # http://www.django-rest-framework.org/api-guide/generic-views/
+    def perform_create(self, serializer):
+        user = self.request.user
+        s = serializer.save(user=user)  # 地址序列器，当然得到的是地址信息
+
+        # 下面的代码是设置用户的默认地址
+        profile = user.profile_of
+        profile.delivery_address = s
+        profile.save()

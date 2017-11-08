@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 以下为商城项目新增
     'rest_framework',
+    # http://www.django-rest-framework.org/api-guide/authentication/#tokenauthentication
+    # 使用token，配置不止这一处，认真看官方文档，还需配置url
+    # authtoken帮你做了验证
     'rest_framework.authtoken',
     'django_filters',
     'corsheaders',

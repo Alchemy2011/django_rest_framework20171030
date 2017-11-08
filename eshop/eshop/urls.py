@@ -17,10 +17,16 @@ from django.conf import settings
 from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
+from rest_framework.authtoken import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^computer/', include('computerapp.urls')),
+    # http://www.django-rest-framework.org/api-guide/authentication/#tokenauthentication
+    # 这个接口就是给前端做登录的，前端会来问题，怎么用这个接口，
+    # 身份验证不能用之前的方法，需要前端工程师在前端用js设置header，
+    # 前端不会做的话，会来问你。
+    url(r'^api-token-auth/', views.obtain_auth_token),
 ]
 
 # https://docs.djangoproject.com/en/1.11/howto/static-files/ 媒体文件不显示
