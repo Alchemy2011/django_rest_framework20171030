@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css">	
+</head>
+
+<body>
+
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
+      <a class="navbar-brand" href="index.html">在线电脑商城</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li><a href="index.html">首页</a></li>  
+        <li><a href="product_list.html?category=1">笔记本</a></li>          
+        <li><a href="product_list.html?category=2">平板电脑</a></li>
+        <li><a href="product_list.html?category=3">一体机</a></li> 
+        <li><a href="product_list.html?category=4">台式机</a></li> 
+        <li><a href="product_list.html?category=5">服务器</a></li>            
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="usercenter.html"><span class="glyphicon glyphicon-user"></span> 用户中心</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">     
+    <div><h3 id="title"></h3></div>
+  </div>
+
+  <br>
+
+  <div class="row">    
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      该分类全部产品排序方式
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="ordering" value="price">价格由低到高</a>
+    </div>    
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="ordering" value="-price">价格由高到低</a>
+    </div>     
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="ordering" value="-sold">销量由大到小</a>
+    </div>  
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="ordering" value="sold">销量由小到大</a>
+    </div>               
+  </div>
+
+  <br>
+
+  <div class="row">    
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      按品牌（销量由大到小）
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="1" ordering="-sold">戴尔</a>
+    </div>    
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="2" ordering="-sold">联想</a>
+    </div>     
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="3" ordering="-sold">惠普</a>
+    </div>  
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="4" ordering="-sold">宏基</a>
+    </div>  
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="5" ordering="-sold">华硕</a>
+    </div>              
+  </div>
+
+  <br>
+
+  <div class="row">    
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      按品牌（销量由小到大）
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="1" ordering="sold">戴尔</a>
+    </div>    
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="2" ordering="sold">联想</a>
+    </div>     
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="3" ordering="sold">惠普</a>
+    </div>  
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="4" ordering="sold">宏基</a>
+    </div>  
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="5" ordering="sold">华硕</a>
+    </div>              
+  </div>
+
+  <br>
+
+  <div class="row">    
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      按品牌（价格由低到高）
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="1" ordering="price">戴尔</a>
+    </div>    
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="2" ordering="price">联想</a>
+    </div>     
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="3" ordering="price">惠普</a>
+    </div>  
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="4" ordering="price">宏基</a>
+    </div>  
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="5" ordering="price">华硕</a>
+    </div>              
+  </div>
+
+  <br>
+
+  <div class="row">    
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      按品牌（价格由高到低）
+    </div>
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="1" ordering="-price">戴尔</a>
+    </div>    
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="2" ordering="-price">联想</a>
+    </div>     
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="3" ordering="-price">惠普</a>
+    </div>  
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="4" ordering="-price">宏基</a>
+    </div>  
+    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2"> 
+      <a class="manufacturer" value="5" ordering="-price">华硕</a>
+    </div>              
+  </div>
+
+  <br>
+
+  <div class="row" id="view"> 
+  </div>
+
+  <div style="padding-bottom:60px;"></div>
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <button id="prev" type="button" class="btn btn-primary">上一页</button>&nbsp&nbsp&nbsp
+      <span id="page_no">1</span>&nbsp&nbsp&nbsp
+      <button id="next" type="button" class="btn btn-danger">下一页</button>
+    </div>
+  </div>
+
+  <div style="padding-bottom:60px;"></div>
+
+</div>
+
+
+<script src="https://ajax.googleapis.bootcss.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="product_list.js"></script>
+<script></script>
+
+</body>
+
+</html>
